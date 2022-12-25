@@ -2,7 +2,6 @@
 var weatherUrl = "https://api.openweathermap.org/data/2.5/weather";
 var APIKey = `d33f443aa634fe21a7565ac3d428430a`;
 var forecastContainer = document.getElementById("five-day-forecast");
-var forecastHtmlContent = "";
 
 //image
 const weatherImg = document.querySelector(".weather-img");
@@ -10,6 +9,8 @@ const h1 = document.querySelector("h1");
 const p = document.querySelector("p");
 const h5 = document.querySelector("h5");
 //location/city
+//item that im setting is an array
+//populate cities in array
 //temperuature
 const form = document.querySelector("form");
 
@@ -30,7 +31,7 @@ form.addEventListener("submit", function (e) {
 });
 
 function secondAPICall(lat, lon, apiKey) {
-  var secondAPI = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}`;
+  var secondAPI = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
 
   fetch(secondAPI)
     .then((response) => {
@@ -57,4 +58,4 @@ function secondAPICall(lat, lon, apiKey) {
       forecastContainer.innerHTML = forecastHtmlContent;
     });
 }
-//make sure everything
+//make sure everything searched shows in local storage LIST and show up to page
