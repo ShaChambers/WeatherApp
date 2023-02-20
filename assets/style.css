@@ -1,5 +1,7 @@
 body {
   background-image: url("./images/71924.jpg");
+  height: 100vh;
+  font-family: "Unbounded", "Times New Roman", Times, serif;
 }
 /*adding header styles for header on html*/
 
@@ -8,4 +10,10 @@ header {
   padding-left: 60px;
   padding-top: 60px;
   color: black;
+}
+/*search bar*/
+form {
+  display: flex;
+  color: black;
+  justify-content: align-items;
 }
